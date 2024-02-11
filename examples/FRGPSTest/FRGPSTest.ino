@@ -4,7 +4,7 @@
 // Connections:
 // - GPS mounted on board
 // Required libraries:
-// - FRLib (download from https://github.com/josmeuleman/FRLib, unzipped in ../Documents/Arduino/libraries/ )
+// - FRLib (download from https://github.com/josmeuleman/FRLibBasics, unzipped in ../Documents/Arduino/libraries/ )
 // - TinyGPSPlus
 // Note:
 // With this script, only raw information from the GPS is plotted
@@ -20,7 +20,7 @@
 // $GNGLL,,,,,,V,N*7A
 // Message length: 225
 //
-// 2023-03-09, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
+// 2024-02-11, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
 
 
 #include <HardwareSerial.h>
