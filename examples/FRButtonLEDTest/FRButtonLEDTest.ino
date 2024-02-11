@@ -4,7 +4,7 @@
 // Connections:
 // - None (all wired on PCB)
 // Required libraries:
-// - FRLib (download the zip from https://github.com/josmeuleman/FRLib)
+// - FRLib (download the zip from https://github.com/josmeuleman/FRLibBasics)
 //
 // 2024-02-11, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
 
