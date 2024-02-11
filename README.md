@@ -55,50 +55,20 @@ Examples:
 - FRButtonLEDTest.ino
 - FRButtonLEDBlinkingTest.ino
 
-## FRPPMReceiver
-The PPMReceiver class creates a listener to a PPM signal.
-Methods:
-
-    #include <FRPPMReceiver.h>
-	PPMReceiver(int pinNumber, int numberOfChannels);
-    void SetLowPassFilter(float* alphaValues);
-    float GetLowPassFilter(int channel);
-    void Update();
-    float ReadChannel(int ChannelNumber);
-
-Examples:
-- FRPPMReceiverTest.ino
-
-## FRTimer
-The Timer class reates a timer object that uses the millis() command to ensure timing accurate timing of a loop
-Methods:
 	
-	#include <FRTimer.h> 
-	Timer();
-	Timer(uint32_t loopTimeMS);
-	void SetLoopTime(uint32_t loopTimeMS);
-	void Start();
-	bool WaitUntilEnd();
-	long GetLoopDuration();
-	bool LoopTimePassed();
-  
-Examples:
-- FRTimerDemo.ino
-- FRTimerAndOverSamplingDemo.ino
-	
-## PPMReceiverManager
-The PPMReceiverManager class is a class specifically for logging ppm signals. It is a variant on PPMReceiver, but based on the SensorManager class, using an interrupt routine.
+## PPMReceiverSensor
+The PPMReceiverSensor class is a class specifically for logging ppm signals. It is a variant on PPMReceiver, but based on the SensorManager class, using an interrupt routine.
 Methods:
 
-	PPMReceiverManager(int pinNumber, int numberOfChannels)
+	PPMReceiverSensor(int pinNumber, int numberOfChannels)
 	void Init();
 	void SetPrefix(String prefix);
     int ReadChannel(int ChannelNumber);
 
 Usage:
 
-	#include <FRPPMReceiverManager.h>
-	PPMReceiverManager MyReceiverManager(PINPPM, NUMBEROFCHANNELS);
+	#include <FRPPMReceiverSensor.h>
+	PPMReceiverSensor MyReceiverManager(PINPPM, NUMBEROFCHANNELS);
 	...
 	MyReceiverManager.Init();
 	myLogger.AddSensor(&MyReceiverManager);
@@ -106,7 +76,7 @@ Usage:
 	MyReceiverManager.ReadChannel(i);
 
 Examples:
-- FRPPMReceiverManagerTest.ino	
+- FRPPMReceiverSensorTest.ino	
 	
 
 ## Other examples
