@@ -4,15 +4,15 @@
 // Connections:
 // - None (all wired on PCB)
 // Required libraries:
-// - FRLib (download the zip from https://github.com/josmeuleman/FRLib)
+// - FRLib (download the zip from https://github.com/josmeuleman/FRLibBasics)
 //
-// 2023-03-04, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
+// 2024-02-11, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
 
 #include <FRLED.h>
 #include <FRButton.h>
 
-const int PINSWITCH = 22;
-const int PINLED = 21;
+const int PINSWITCH = 35;
+const int PINLED = 25;
 int ledMode = 0;
 
 Button myButton(PINSWITCH, true);  // Create a button object with the given pin. True for an inverted button, false for a normal button
