@@ -3,6 +3,9 @@
 // - 2x potmeter
 // - 6x breadboard cables female-male
 // - FlightRecorder PCB V2. For V1, the pinout is different. Old pinnumbers are in the comments
+// Connections:
+// - J19 (V2) / J6 (v1) to potmeter. The middle pin of the potmeter (wiper) connected to the middle pin of the connector on the board
+// - J18 (V2) / J7 (v1) to potmeter. The middle pin of the potmeter (wiper) connected to the middle pin of the connector on the board
 // Required libraries:
 // - FRLibBasics (download from https://github.com/josmeuleman/FRLibBasics , unzipped in ../Documents/Arduino/libraries/ )
 //
