@@ -10,8 +10,8 @@
 
 #include <FRGeneric.h>
 
-const int PINAD[2] = {34, 39}; // Analog input pin numbers
-//const int PINAD[2] = {35, 34}; // Analog input pin numbers
+const int PINAD[2] = {34, 39}; //V2, Analog input pin numbers
+//const int PINAD[2] = {35, 34}; //V1, Analog input pin numbers
 
 void setup() {
   Serial.begin(9600); // Start the serial communciation
