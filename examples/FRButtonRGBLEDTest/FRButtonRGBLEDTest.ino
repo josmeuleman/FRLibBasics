@@ -1,6 +1,6 @@
 // Testscript for testing the button and the LED on the ESP PCB
 // Required hardware:
-// - None (all available on PCB)
+// - FlightRecorder PCB V2. This script is not suitable for V1
 // Connections:
 // - None (all wired on PCB)
 // Required libraries:
