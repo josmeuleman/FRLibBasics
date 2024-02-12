@@ -1,18 +1,20 @@
 // Testscript for testing the button and the LED on the ESP PCB
 // Required hardware:
-// - None (all available on PCB)
-// Connections:
-// - None (all wired on PCB)
+//- FlightRecorder PCB V2. For V1, the pinout is different. Old pinnumbers are in the comments
 // Required libraries:
-// - FRLib (download the zip from https://github.com/josmeuleman/FRLibBasics)
+// - FRLibBasics (download the zip from https://github.com/josmeuleman/FRLibBasics)
 //
 // 2024-02-11, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
 
 #include <FRLED.h>
 #include <FRButton.h>
 
-const int PINSWITCH = 35;
-const int PINLED = 25; // Blue led = 25; Red led = 33; Green Led = 32;
+const int PINSWITCH = 35; //V2
+// const int PINSWITCH = 22; //V1
+
+const int PINLED = 25; //V2, Blue led = 25; Red led = 33; Green Led = 32;
+// const int PINLED = 21; //V1, only blue led
+
 int ledMode = 0;
 
 Button myButton(PINSWITCH, true);  // Create a button object with the given pin. True for an inverted button, false for a normal button
