@@ -11,8 +11,12 @@
 #include <FRLED.h>
 #include <FRButton.h>
 
-const int PINSWITCH = 35;
-const int PINLED = 25; // Blue led = 25; Red led = 33; Green Led = 32;
+const int PINSWITCH = 35; //V2
+// const int PINSWITCH = 22; //V1
+
+const int PINLED = 25; //V2, Blue led = 25; Red led = 33; Green Led = 32;
+// const int PINLED = 21; //V1, only blue led
+
 
 Button myButton(PINSWITCH, true); // Create a button object with the given pin. True for an inverted button, false for a normal button
 LED myLed(PINLED); // Create a led object with the given pin.
