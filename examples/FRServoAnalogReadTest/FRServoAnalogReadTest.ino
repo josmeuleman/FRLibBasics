@@ -2,16 +2,13 @@
 // Required hardware:
 // - 2x potmeter
 // - 6x breadboard cables female-male
-// - 2x small servos (eg. TGY-TG9) with cable 
+// - 2x small servos (eg. TGY-TG9) with cable
+// - FlightRecorder PCB V2. For V1, the pinout is different. Old pinnumbers are in the comments 
 // Connections:
-// - Potmeter1, GND - Analog Input J6, GND
-// - Potmeter1, Wiper - Analog Input J6, D35
-// - Potmeter2, VCC - Analog Input J6, 3.3V
-// - Potmeter2, GND - Analog Input J7, GND
-// - Potmeter2, Wiper - Analog Input J7, D34
-// - Potmeter2, VCC - Analog Input J7, 3.3V
-// - Servo1 (3 wire) - Servo1 J11 
-// - Servo2 (3 wire) - Servo2 J12 
+// - J19 (V2) / J6 (v1) to potmeter. The middle pin of the potmeter (wiper) connected to the middle pin of the connector on the board
+// - J18 (V2) / J7 (v1) to potmeter. The middle pin of the potmeter (wiper) connected to the middle pin of the connector on the board
+// - J10 (V2) / J11 (V1) to servo
+// - J11 (V2) / J12 (V1) to servo
 // Required libraries:
 // - ESP32Servo.h (script tested on version 0.12.1)
 // Important note:
@@ -23,8 +20,10 @@
 #include <ESP32Servo.h>
 
 
-const int PINAD[2] = {34, 35};
-const int PINSERVO[2] = {25, 26};
+const int PINAD[2] = {34, 39}; //V2, Analog input pin numbers
+//const int PINAD[2] = {35, 34}; //V1, Analog input pin numbers
+const int PINSERVO[2] = {26, 27};  //V2, Servo pin numbers
+//const int PINSERVO[2] = {25, 26}; //V1, Servo pin numbers
 
 Servo myServo[2];  // create a servo object
 
