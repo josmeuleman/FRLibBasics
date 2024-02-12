@@ -1,6 +1,7 @@
 // Testscript for reading testing GPS raw data on the Flight Recorder Board
 // Required hardware:
 // - 1x GPS Sensor + Antenna (GY-GPSV3-NEO)
+// - FlightRecorder PCB V2/V1
 // Connections:
 // - GPS mounted on board
 // Required libraries:
