@@ -1,8 +1,6 @@
-
-
 // Testscript for checking communication with a MPU9250 accelerometer & gyro on Flight Recorder Board
 // Required hardware:
-// - 1x Flight Recorder Board with ESP32
+// - FlightRecorder PCB V2. V1 does not support a MPU9250
 // - 1x MPU9250
 // Connections:
 // 
