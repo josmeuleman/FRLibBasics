@@ -1,14 +1,8 @@
-// Testscript for testing the analog input on the Flight Recorder PCB
+// Testscript for testing the analog input on the Flight Recorder PCB v2
 // Required hardware:
 // - 2x potmeter
 // - 6x breadboard cables female-male
-// Connections:
-// - Potmeter1, GND - Analog Input J6, GND
-// - Potmeter1, Wiper - Analog Input J6, D35
-// - Potmeter2, VCC - Analog Input J6, 3.3V
-// - Potmeter2, GND - Analog Input J7, GND
-// - Potmeter2, Wiper - Analog Input J7, D34
-// - Potmeter2, VCC - Analog Input J7, 3.3V
+// - FlightRecorder PCB V2. For V1, the pinout is different. Old pinnumbers are in the comments
 // Required libraries:
 // - FRLibBasics (download from https://github.com/josmeuleman/FRLibBasics , unzipped in ../Documents/Arduino/libraries/ )
 //
@@ -17,6 +11,7 @@
 #include <FRGeneric.h>
 
 const int PINAD[2] = {34, 39}; // Analog input pin numbers
+//const int PINAD[2] = {35, 34}; // Analog input pin numbers
 
 void setup() {
   Serial.begin(9600); // Start the serial communciation
