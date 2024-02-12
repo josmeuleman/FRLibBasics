@@ -68,16 +68,31 @@ Methods:
 Usage:
 
 	#include <FRPPMReceiverSensor.h>
-	PPMReceiverSensor MyReceiverManager(PINPPM, NUMBEROFCHANNELS);
+	PPMReceiverSensor MyReceiver(PINPPM, NUMBEROFCHANNELS);
 	...
-	MyReceiverManager.Init();
-	myLogger.AddSensor(&MyReceiverManager);
+	MyReceiver.Init();
 	...
-	MyReceiverManager.ReadChannel(i);
+	MyReceiver.ReadChannel(i);
 
 Examples:
 - FRPPMReceiverSensorTest.ino	
 	
+## FRTimer
+The Timer class reates a timer object that uses the millis() command to ensure timing accurate timing of a loop
+Methods:
+	
+	#include <FRTimer.h> 
+	Timer();
+	Timer(uint32_t loopTimeMS);
+	void SetLoopTime(uint32_t loopTimeMS);
+	void Start();
+	bool WaitUntilEnd();
+	long GetLoopDuration();
+	bool LoopTimePassed();
+  
+Examples:
+- FRTimerDemo.ino
+- FRTimerAndOverSamplingDemo.ino
 
 ## Other examples
 **FRGPSTest.ino**
@@ -95,3 +110,11 @@ Uses ESP32Servo library for controlling servo's with the analog input.
 **FRTimeDemo.ino**
 
 Demonstrates the uses of millis() and the duration of print statements.
+
+**FRBMP280Test.ino**
+
+Sets up communication to the BMP280 over I2C
+
+**FRMPU9250Test.ino**
+
+Sets up communication to the MPU9250 over I2C
