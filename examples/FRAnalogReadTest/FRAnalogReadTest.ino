@@ -6,7 +6,7 @@
 // Required libraries:
 // - FRLibBasics (download from https://github.com/josmeuleman/FRLibBasics , unzipped in ../Documents/Arduino/libraries/ )
 //
-// 2024-02-11, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
+// 2024-02-12, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
 
 #include <FRGeneric.h>
 
