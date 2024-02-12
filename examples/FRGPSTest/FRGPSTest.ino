@@ -56,4 +56,7 @@ void loop() {
       msg = ""; // clear the message
     }
   }
+
+  // Insert your code here to print global positions
+  
 }
