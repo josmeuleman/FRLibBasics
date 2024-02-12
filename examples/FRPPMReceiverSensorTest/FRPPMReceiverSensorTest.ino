@@ -21,7 +21,7 @@ const int PINPPM = 4;   // PPL2 input pint
 const int NUMBEROFCHANNELS = 4;
 const int PRINTLOOP = 1;  //We print to the screen after X measurements
 
-PPMReceiverSensor MyReceiverManager(PINPPM, NUMBEROFCHANNELS);  // Create a PPM receiver object with given pin and number of channels
+PPMReceiverSensor MyReceiver(PINPPM, NUMBEROFCHANNELS);  // Create a PPM receiver object with given pin and number of channels
 
 int channelValues[NUMBEROFCHANNELS];
 
@@ -31,7 +31,7 @@ int channelValues[NUMBEROFCHANNELS];
 //---------------------------------------------------------------------------------------------------------
 void setup() {
   Serial.begin(9600);
-  MyReceiverManager.Init();
+  MyReceiver.Init();
 }
 
 //---------------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ void setup() {
 //---------------------------------------------------------------------------------------------------------
 void loop() {
   for (int i = 0; i < NUMBEROFCHANNELS; i++) {  // Cycle through the channels to read and print the value
-    channelValues[i] = MyReceiverManager.ReadChannel(i);
+    channelValues[i] = MyReceiver.ReadChannel(i);
     Serial.print(channelValues[i]);
     Serial.print("; ");
   }
