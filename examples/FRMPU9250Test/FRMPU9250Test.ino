@@ -3,11 +3,11 @@
 // - FlightRecorder PCB V2. V1 does not support a MPU9250
 // - 1x MPU9250
 // Connections:
-// 
+// - MPU9260 inserted in U2
 // Required libraries:
 // - FRLib (download from https://github.com/josmeuleman/FRLib, unzipped in ../Documents/Arduino/libraries/ )
 // - MPU9250 by Bolder Flight Systems
-// - Optionally, Eigen by Bolder Flight Systems
+// - Eigen by Bolder Flight Systems
 //
 // 2024-02-12, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
 
@@ -48,5 +48,6 @@ void setup() {
 // This block of code is looped infinitely
 //---------------------------------------------------------------------------------------------------------
 void loop() {
+  // insert your script here to read the sensor and print to the serial port 
 }
 
