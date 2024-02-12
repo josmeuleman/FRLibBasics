@@ -1,6 +1,8 @@
 // Testscript for testing the button and the LED on the ESP PCB
 // Required hardware:
 //- FlightRecorder PCB V2. For V1, the pinout is different. Old pinnumbers are in the comments
+// Connections:
+// - None (all wired on PCB)
 // Required libraries:
 // - FRLibBasics (download the zip from https://github.com/josmeuleman/FRLibBasics)
 //
