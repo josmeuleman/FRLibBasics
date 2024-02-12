@@ -9,14 +9,14 @@
 // Required libraries:
 // - FRLib (download from https://github.com/josmeuleman/FRLib, unzipped in ../Documents/Arduino/libraries/ )
 // - MPU9250 by Bolder Flight Systems
-// - Eigen by Bolder Flight Systems
+// - Optionally, Eigen by Bolder Flight Systems
 //
-// 2023-03-04, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
+// 2024-02-12, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
 
 #include <mpu9250.h>
 
-const int I2C_SDA = 33; // The data pin for I2C communication
-const int I2C_SCL = 32; // The clock pin for I2C communcation
+const int I2C_SDA = 21; // The data pin for I2C communication
+const int I2C_SCL = 22; // The clock pin for I2C communcation
 const int MPU9250_ADDRESS = 0x68; // The I2C address of the MPU9250 sensor
 
 const int BAUDSERIAL = 9600;  //baud rate for serial communication
