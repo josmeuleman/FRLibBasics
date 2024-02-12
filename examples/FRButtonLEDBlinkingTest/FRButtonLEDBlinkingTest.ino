@@ -12,7 +12,7 @@
 #include <FRButton.h>
 
 const int PINSWITCH = 35;
-const int PINLED = 25;
+const int PINLED = 25; // Blue led = 25; Red led = 33; Green Led = 32;
 int ledMode = 0;
 
 Button myButton(PINSWITCH, true);  // Create a button object with the given pin. True for an inverted button, false for a normal button
