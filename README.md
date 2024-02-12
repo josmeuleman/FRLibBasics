@@ -95,13 +95,26 @@ Examples:
 - FRTimerAndOverSamplingDemo.ino
 
 ## Other examples
+
+**FRAnalogReadTest.ino**
+
+Reads and prints analog input.
+
+**FRBMP280Test.ino**
+
+Sets up communication to the BMP280 over I2C
+
 **FRGPSTest.ino**
 
 Read the Serial2 port and prints the data to the Serial monitor. Useful for checking connection with GPS Sensor. This example does not decode the signal, it merely prints the raw data
 
-**FRMPU6050Test.ino**
+**FRMPU9250Test.ino**
 
-Sets up communication to the MPU6050 over I2C
+Sets up communication to the MPU9250 over I2C
+
+**FRPitotSensorTest**
+
+Sets up communication to the Pitot sensor over I2C
 
 **FRServoAnalogReadTest.ino**
 
@@ -111,10 +124,4 @@ Uses ESP32Servo library for controlling servo's with the analog input.
 
 Demonstrates the uses of millis() and the duration of print statements.
 
-**FRBMP280Test.ino**
 
-Sets up communication to the BMP280 over I2C
-
-**FRMPU9250Test.ino**
-
-Sets up communication to the MPU9250 over I2C
