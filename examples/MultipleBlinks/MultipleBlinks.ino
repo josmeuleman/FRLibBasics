@@ -10,7 +10,7 @@ unsigned long currentMillis;
 // Setup
 void setup()
 {
-  Serial.begin(115200);  //start Serial in case we need to print debugging info
+  Serial.begin(9600);  //start Serial in case we need to print debugging info
   pinMode(LEDPIN, OUTPUT);
   startMillis = millis();  //initial start time
   currentMillis = startMillis;
