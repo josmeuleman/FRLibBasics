@@ -24,7 +24,7 @@ void loop()
   for (int i=0; i< NUMBEROFBLINKS; i++){
     BlinkOnce(BLINKDURATIONMS);
   }
-
+  
   // Now kill the time until exactly PERIODMS milliseconds has passed since the start of the loop
   // Use a 'while' loop  and use the 'millis()' function
   while (currentMillis - startMillis < PERIODMS){
@@ -37,7 +37,7 @@ void loop()
 
 // Custom function
 void BlinkOnce(byte tms) {
-  Serial.print("Blink ");
+  Serial.println("-Blink ");
   digitalWrite(LEDPIN, true);
   delay(tms);
   digitalWrite(LEDPIN, false);
