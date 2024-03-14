@@ -1,3 +1,13 @@
+// Demo of  blinking internal LED with accurate timing using millis
+// Required hardware:
+// - None (ESP32 only)
+// Connections:
+// - None (all internal)
+// Required libraries:
+// - none
+//
+// 2024-03-14, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
+
 // Define some global variables and constants
 const byte LEDPIN = LED_BUILTIN;    //using the built in LED
 const byte NUMBEROFBLINKS = 4;
