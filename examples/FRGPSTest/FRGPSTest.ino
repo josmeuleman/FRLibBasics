@@ -5,7 +5,7 @@
 // Connections:
 // - GPS mounted on board
 // Required libraries:
-// - FRLib (download from https://github.com/josmeuleman/FRLibBasics, unzipped in ../Documents/Arduino/libraries/ )
+// - FRLibBasics (download from https://github.com/josmeuleman/FRLibBasics, unzipped in ../Documents/Arduino/libraries/ )
 // - TinyGPSPlus
 // Note:
 // With this script, only raw information from the GPS is plotted

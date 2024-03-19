@@ -1,3 +1,13 @@
+// Demo of  blinking internal LED with accurate timing using millis
+// Required hardware:
+// - None (ESP32 only)
+// Connections:
+// - None (all internal)
+// Required libraries:
+// - none
+//
+// 2024-03-14, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
+
 // Define some global variables and constants
 const byte LEDPIN = LED_BUILTIN;    //using the built in LED
 const byte NUMBEROFBLINKS = 4;
@@ -10,7 +20,7 @@ unsigned long currentMillis;
 // Setup
 void setup()
 {
-  Serial.begin(115200);  //start Serial in case we need to print debugging info
+  Serial.begin(9600);  //start Serial in case we need to print debugging info
   pinMode(LEDPIN, OUTPUT);
   startMillis = millis();  //initial start time
   currentMillis = startMillis;
@@ -24,7 +34,7 @@ void loop()
   for (int i=0; i< NUMBEROFBLINKS; i++){
     BlinkOnce(BLINKDURATIONMS);
   }
-
+  
   // Now kill the time until exactly PERIODMS milliseconds has passed since the start of the loop
   // Use a 'while' loop  and use the 'millis()' function
   while (currentMillis - startMillis < PERIODMS){
@@ -37,7 +47,7 @@ void loop()
 
 // Custom function
 void BlinkOnce(byte tms) {
-  Serial.print("Blink ");
+  Serial.println("-Blink ");
   digitalWrite(LEDPIN, true);
   delay(tms);
   digitalWrite(LEDPIN, false);
