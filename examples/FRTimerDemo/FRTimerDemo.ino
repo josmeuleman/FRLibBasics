@@ -4,10 +4,10 @@
 // Connections:
 // - GPS mounted on board
 // Required libraries:
-// - FRLib (download from https://github.com/josmeuleman/FRLib, unzipped in ../Documents/Arduino/libraries/ )
+// - FRLibBasics (download from https://github.com/josmeuleman/FRLibBasics, unzipped in ../Documents/Arduino/libraries/ )
 // - TinyGPSPlus
 //
-// 2023-03-16, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
+// 2024-03-21, Jos Meuleman, Inholland Aeronautical & Precision Engineering, The Netherlands
 
 #include <HardwareSerial.h>
 #include <TinyGPSPlus.h>
