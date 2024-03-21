@@ -54,7 +54,7 @@ Examples:
 - FRButtonLEDTest.ino
 - FRButtonLEDBlinkingTest.ino
 
-## FRRRGBLED
+## FRRGBLED
 The class RGBLED interfaces the RGB led on the Flight Recorder board (v2 only
 
 	#include <FRRGBLED.h>
