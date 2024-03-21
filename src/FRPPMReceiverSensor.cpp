@@ -53,24 +53,6 @@ int PPMReceiverSensor::ReadChannel(int ChannelNumber) {
   }
 }
 
-String PPMReceiverSensor::HeaderString(){
-  String tempString;
-  for (int i = 0; i < _numberOfChannels; i++) {
-	tempString.concat(_prefix);
-	tempString.concat(i);
-	tempString.concat("; ");
-  }
-  return tempString;
-}
-
-String PPMReceiverSensor::SensorString(){
-  String tempString;
-  for (int i = 0; i < _numberOfChannels; i++) {
-	tempString.concat(createFloatString(_channelValues[i], 2));  
-  }
-  return tempString;
-}
-
 void PPMReceiverSensor::CountPulse() {
   unsigned long tNow = micros();
   if (digitalRead(_pinNumber)) {
