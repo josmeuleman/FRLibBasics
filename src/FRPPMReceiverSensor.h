@@ -6,9 +6,7 @@
 #ifndef FRPPMReceiverSensor_h
 #define FRPPMReceiverSensor_h
 
-#include <FRSensorManager.h>
-
-class PPMReceiverSensor : public SensorManager{
+class PPMReceiverSensor {
   public:
   PPMReceiverSensor(int pinNumber, int numberOfChannels);
   ~PPMReceiverSensor();
@@ -18,9 +16,7 @@ class PPMReceiverSensor : public SensorManager{
   
   int ReadChannel(int ChannelNumber);
   
-  String HeaderString() override;
-  String SensorString() override;
-  
+ 
   private:
   int _pinNumber;
   int _numberOfChannels;
