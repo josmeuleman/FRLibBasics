@@ -1,27 +1,43 @@
-Button	KEYWORD1
-SetPinNumber	KEYWORD2
-Update	KEYWORD2
-GetState	KEYWORD2
-HasChanged	KEYWORD2
-HasChangedUp	KEYWORD2
-HasChangedDown	KEYWORD2
+# This file maps classes and methods to keywords for syntax highlighting in Arduino IDE
 
-LED	KEYWORD1
-SetPinNumber	KEYWORD2
-SetState	KEYWORD2
-SetOn	KEYWORD2
-SetOff	KEYWORD2
-Toggle	KEYWORD2
-SetBlink	KEYWORD2
-
-PPMReceiver	KEYWORD1
-SetLowPassFilter	KEYWORD2
-GetLowPassFilter	KEYWORD2
-Update	KEYWORD2
-ReadChannel	KEYWORD2
-
-createTimeString	KEYWORD2
-createDateString	KEYWORD2
-createFloatString	KEYWORD2
-createIntString	KEYWORD2
-mapf	KEYWORD2
+# Classes
+FRGeneric	KEYWORD1
+	createTimeString	KEYWORD2
+	createDateString	KEYWORD2
+	createFloatString	KEYWORD2
+	createIntString	KEYWORD2
+	mapf	KEYWORD2
+FRButton	KEYWORD1
+	SetPinNumber	KEYWORD2
+	Update	KEYWORD2
+	GetState	KEYWORD2
+	HasChanged	KEYWORD2
+	HasChangedUp	KEYWORD2
+	HasChangedDown	KEYWORD2
+FRLED	KEYWORD1
+	SetPinNumber	KEYWORD2
+	SetState	KEYWORD2
+	SetOn	KEYWORD2
+	SetOff	KEYWORD2
+	Toggle	KEYWORD2
+	SetBlink	KEYWORD2
+	Update	KEYWORD2
+FRRGBLED	KEYWORD1
+	SetPinNumber	KEYWORD2
+	SetColorBalance	KEYWORD2
+	SetBrightness	KEYWORD2
+	SetState	KEYWORD2
+	SetColor	KEYWORD2
+	SetOn	KEYWORD2
+	SetOff	KEYWORD2
+	Toggle	KEYWORD2
+PPMReceiverSensor	KEYWORD1
+	Init	KEYWORD2
+	SetPrefix	KEYWORD2
+	ReadChannel	KEYWORD2
+FRTimer	KEYWORD1
+	SetLoopTime	KEYWORD2
+	Start	KEYWORD2
+	WaitUntilEnd	KEYWORD2
+	GetLoopDuration	KEYWORD2
+	LoopTimePassed	KEYWORD2
