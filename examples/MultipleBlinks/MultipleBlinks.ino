@@ -41,7 +41,7 @@ void loop()
     currentMillis = millis();  //get the current "time" (actually the number of milliseconds since the program started)
   } 
   Serial.println("End of Loop");
-  startMillis = currentMillis;  //IMPORTANT to save the start time of the current LED state.
+  startMillis = currentMillis;  //Important to save the start time for the next loop.
  
 }
 
