@@ -19,7 +19,6 @@ Examples:
 
 
 ## FRButton
-
 The class button is allows for monitoring binary sensors such as buttons. 
 Methods:
 
@@ -37,7 +36,7 @@ Examples:
 - FRButtonLEDTest.ino
 
 ## FRLED
-The class LED is allows for controlling binary outputs such as LEDs. 
+The class LED allows for controlling binary outputs such as LEDs. 
 Methods:
 
 	#include <FRLED.h>
@@ -55,6 +54,30 @@ Examples:
 - FRButtonLEDTest.ino
 - FRButtonLEDBlinkingTest.ino
 
+## FRRRGBLED
+The class RGBLED interfaces the RGB led on the Flight Recorder board (v2 only
+
+	#include <FRRGBLED.h>
+	RGBLED();
+	RGBLED(byte pinNumberRed, byte pinNumberGreen, byte pinNumberBlue);
+	RGBLED(byte pinNumberRed, byte pinNumberGreen, byte pinNumberBlue, bool colorBalance);
+	~RGBLED();
+
+	void SetPinNumber(byte pinNumberRed, byte pinNumberGreen, byte pinNumberBlue);
+  
+	void SetColorBalance(bool colorBalance);
+	void SetBrightness(byte inBrightnessRed, byte inBrightnessGreen, byte inBrightnessBlue);
+
+	void SetState(bool state);
+	void SetColor(rgbcolors color);
+	void SetColor(byte color);
+  
+	void SetOn();
+	void SetOff();
+	void Toggle();
+	
+Examples:
+- RGBLEDTest.ino	
 	
 ## PPMReceiverSensor
 The PPMReceiverSensor class is a class specifically for logging ppm signals. It is a variant on PPMReceiver, but based on the SensorManager class, using an interrupt routine.
@@ -91,37 +114,21 @@ Methods:
 	bool LoopTimePassed();
   
 Examples:
-- FRTimerDemo.ino
-- FRTimerAndOverSamplingDemo.ino
+- FRTimingDemo1.ino
+- FRTimingDemo2.ino
+Demonstrates the difference between using delay and millis() in the duration of loops.
 
 ## Other examples
-
-**FRAnalogReadTest.ino**
-
-Reads and prints analog input.
-
-**FRBMP280Test.ino**
-
-Sets up communication to the BMP280 over I2C
 
 **FRGPSTest.ino**
 
 Read the Serial2 port and prints the data to the Serial monitor. Useful for checking connection with GPS Sensor. This example does not decode the signal, it merely prints the raw data
 
-**FRMPU9250Test.ino**
-
-Sets up communication to the MPU9250 over I2C
-
-**FRPitotSensorTest**
-
-Sets up communication to the Pitot sensor over I2C
-
 **FRServoAnalogReadTest.ino**
 
 Uses ESP32Servo library for controlling servo's with the analog input.
 
-**FRTimeDemo.ino**
+**MultipleBlinks**
 
-Demonstrates the uses of millis() and the duration of print statements.
-
+Solution to the assignment to make the internal LED blink at fixed interval.
 
