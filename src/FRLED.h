@@ -28,7 +28,7 @@ private:
   hw_timer_t *_timer = NULL;
   
   static void IRAM_ATTR onTimer();
-  uint32_t _blinkIntervalUs = 500000;
+  float _blinkFreqHz = 5;
   static LED* _instance;
 
 };
