@@ -12,8 +12,10 @@ LED::LED() {
   _pinNumber = -1;
   _isOn = false;
   _blinkMode = false;
-  _timer = timerBegin(0, 80, true);
-  timerAttachInterrupt(_timer, &LED::onTimer, true);
+  //_timer = timerBegin(0, 80, true);
+  _timer = timerBegin(1000);
+  //timerAttachInterrupt(_timer, &LED::onTimer, true);
+  timerAttachInterrupt(_timer, &LED::onTimer);
 }
 
 LED::LED(int pinNumber) {
@@ -22,8 +24,10 @@ LED::LED(int pinNumber) {
   _isOn = false;
   _blinkMode = false;   
   pinMode(_pinNumber, OUTPUT);
-  _timer = timerBegin(0, 80, true);
-  timerAttachInterrupt(_timer, &LED::onTimer, true);  
+  //_timer = timerBegin(0, 80, true);
+  _timer = timerBegin(1000);
+  //timerAttachInterrupt(_timer, &LED::onTimer, true);
+  timerAttachInterrupt(_timer, &LED::onTimer);
 }
 
 LED::~LED() {
@@ -43,15 +47,16 @@ void LED::SetOn() {
   _isOn = true;
   SetState(_isOn);
   _blinkMode = false;  
-  timerAlarmDisable(_timer);
-
+  //timerAlarmDisable(_timer);
+  timerStart(_timer);
 }
 
 void LED::SetOff() {
   _isOn = false;
   SetState(_isOn);
   _blinkMode = false;
-  timerAlarmDisable(_timer);
+  timerStop(_timer);
+  //timerAlarmDisable(_timer);
 
 }
 
@@ -61,10 +66,15 @@ void LED::Toggle() {
 }
 
 void LED::SetBlink(int interval) {
-  _blinkIntervalUs = interval * 1000;
+  _blinkFreqHz = 1000.0/interval;
   _blinkMode = true;
-  timerAlarmWrite(_timer, _blinkIntervalUs, true);
-  timerAlarmEnable(_timer);
+  if (_timer != NULL) {
+	  Serial.println('kill the timer');
+	  timerEnd(_timer);
+  }
+  _timer = timerBegin(_blinkFreqHz);
+  //timerAlarmWrite(_timer, _blinkIntervalUs, true);
+  //timerAlarmEnable(_timer);
 }
 
 void IRAM_ATTR LED::onTimer() {
