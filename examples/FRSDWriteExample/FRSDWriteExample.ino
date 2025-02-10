@@ -33,7 +33,7 @@ void setup() {
     return;
   }
 
-
+  // Some test code to see if the writing works 
   openFile();
   writeLineFile("Test Message 2");
   writeLineFile("Another line 2");
