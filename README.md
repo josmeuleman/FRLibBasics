@@ -129,6 +129,10 @@ Read the Serial2 port and prints the data to the Serial monitor. Useful for chec
 
 Uses ESP32Servo library for controlling servo's with the analog input.
 
+**FRSDWriteExample.ino**
+
+Template for writing lines to an SD card.
+
 **MultipleBlinks**
 
 Solution to the assignment to make the internal LED blink at fixed interval.
