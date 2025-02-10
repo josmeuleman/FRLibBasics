@@ -2,6 +2,7 @@
 #include "SD.h"
 File myFile;  // Object for the file
 const String MYFILENAME = "/hello.txt";
+bool isOpen = false;
 
 void openFile() {
   Serial.println("Open file for writing");
@@ -21,9 +22,7 @@ void writeLineFile(const char *message) {
 }
 
 void closeFile() {
-  if(!myFile.close()){
-    Serial.println("Closing file failed");
-  };
+  myFile.close();
 }
 
 void setup() {
@@ -43,4 +42,11 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  
+  // Read the button
+  // if button pressed and isOpen = false, then open file and make isOpen true;
+  // if button pressed and isOpen = true, then close file and make isOpen false;
+
+  // read the potmeter and if isOpen, then write to the file
+
 }
