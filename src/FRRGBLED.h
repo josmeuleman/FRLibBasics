@@ -15,7 +15,7 @@ const byte BRIGHTNESSRED = 7;
 const byte BRIGHTNESSGREEN = 255;
 const byte BRIGHTNESSBLUE = 15;
 
-typedef enum rgbcolors {
+enum rgbcolors {
   BLACK = 0,
   RED,
   GREEN,
