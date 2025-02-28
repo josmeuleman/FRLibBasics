@@ -69,7 +69,7 @@ void LED::SetBlink(int interval) {
   _blinkFreqHz = 1000.0/interval;
   _blinkMode = true;
   if (_timer != NULL) {
-	  Serial.println('kill the timer');
+	  //Serial.println("kill the timer");
 	  timerEnd(_timer);
   }
   _timer = timerBegin(_blinkFreqHz);
