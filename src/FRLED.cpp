@@ -11,9 +11,9 @@ LED::LED() {
   _instance = this; // Store a pointer to this instance
   _pinNumber = -1;
   _isOn = false;
-  _blinkMode = false;
+  //_blinkMode = false;
   //_timer = timerBegin(0, 80, true);
-  _timer = timerBegin(1000);
+  //_timer = timerBegin(1000);
   //timerAttachInterrupt(_timer, &LED::onTimer, true);
   timerAttachInterrupt(_timer, &LED::onTimer);
 }
@@ -22,12 +22,12 @@ LED::LED(int pinNumber) {
   _instance = this; // Store a pointer to this instance
   _pinNumber = pinNumber;
   _isOn = false;
-  _blinkMode = false;   
+  //_blinkMode = false;   
   pinMode(_pinNumber, OUTPUT);
   //_timer = timerBegin(0, 80, true);
-  _timer = timerBegin(1000);
+  //_timer = timerBegin(1000);
   //timerAttachInterrupt(_timer, &LED::onTimer, true);
-  timerAttachInterrupt(_timer, &LED::onTimer);
+  //timerAttachInterrupt(_timer, &LED::onTimer);
 }
 
 LED::~LED() {
@@ -46,16 +46,16 @@ void LED::SetState(bool state) {
 void LED::SetOn() {
   _isOn = true;
   SetState(_isOn);
-  _blinkMode = false;  
+  //_blinkMode = false;  
   //timerAlarmDisable(_timer);
-  timerStart(_timer);
+  //timerStart(_timer);
 }
 
 void LED::SetOff() {
   _isOn = false;
   SetState(_isOn);
-  _blinkMode = false;
-  timerStop(_timer);
+  //_blinkMode = false;
+  //timerStop(_timer);
   //timerAlarmDisable(_timer);
 
 }
@@ -65,6 +65,7 @@ void LED::Toggle() {
   SetState(_isOn);
 }
 
+/*
 void LED::SetBlink(int interval) {
   _blinkFreqHz = 1000.0/interval;
   _blinkMode = true;
@@ -77,9 +78,11 @@ void LED::SetBlink(int interval) {
   //timerAlarmEnable(_timer);
 }
 
+
 void IRAM_ATTR LED::onTimer() {
   static bool ledState = false;
   digitalWrite(_instance->_pinNumber, ledState);
   ledState = !ledState;
 }
 
+*/
