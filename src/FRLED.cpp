@@ -15,7 +15,7 @@ LED::LED() {
   //_timer = timerBegin(0, 80, true);
   _timer = timerBegin(1000);
   //timerAttachInterrupt(_timer, &LED::onTimer, true);
-  //timerAttachInterrupt(_timer, &LED::onTimer);
+  timerAttachInterrupt(_timer, &LED::onTimer);
 }
 
 LED::LED(int pinNumber) {
@@ -31,7 +31,7 @@ LED::LED(int pinNumber) {
 }
 
 LED::~LED() {
-  //delete _timer;
+  delete _timer;
 }
 
 void LED::SetPinNumber(int pinNumber) {
