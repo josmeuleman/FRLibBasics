@@ -17,17 +17,17 @@ class LED {
   void SetOn();
   void SetOff();
   void Toggle();
-  //void SetBlink(int interval);
+  void SetBlink(int interval);
 
   
 private:
   int _pinNumber;
   bool _isOn;
-  //bool _blinkMode;
-  //int _timerInterval;
-  //hw_timer_t *_timer = NULL;
+  bool _blinkMode;
+  int _timerInterval;
+  hw_timer_t *_timer = NULL;
   
-  //static void IRAM_ATTR onTimer();
+  static void IRAM_ATTR onTimer();
   float _blinkFreqHz = 5;
   static LED* _instance;
 
